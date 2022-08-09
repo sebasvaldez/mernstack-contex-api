@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-new mongoose.Schema({
+const postSchema=new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -16,3 +16,6 @@ new mongoose.Schema({
     public_id: String,
   },
 });
+
+
+export default mongoose.model("Post", postSchema)
