@@ -22,7 +22,7 @@ export const createPost = async (req, res) => {
   try {
     const { title, description } = req.body;
 
-    if(req.files.image){
+    if(req.files?.image){
     const result=  await uploadImage(req.files.image.tempFilePath)
      image= {
       url: result.secure_url,
